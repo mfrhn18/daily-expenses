@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "date": "27 January",
+      "entries": [
+        {
+          "id": 1,
+          "timestamp": "10.00",
+          "item": "pisang goreng",
+          "price": "10000"
+        },
+        {
+          "id": 2,
+          "timestamp": "12.00",
+          "item": "es kopi susu",
+          "price": "20000"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "date": "28 January",
+      "entries": [
+        {
+          "id": 1,
+          "timestamp": "10.00",
+          "item": "nasi uduk",
+          "price": "10000"
+        },
+        {
+          "id": 2,
+          "timestamp": "11.00",
+          "item": "es teh",
+          "price": "5000"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "date": "29 January",
+      "entries": [
+          {
+            "id": 1,
+            "timestamp": "10.00",
+            "item": "bubur ayam",
+            "price": "10000"
+          }
+      ]
+    },
+    {
+      "id": 4,
+      "date": "30 January",
+      "entries": [
+        {
+          "id": 1,
+          "timestamp": "07.00",
+          "item": "lontong sayur",
+          "price": "12000"
+        },
+        {
+          "id": 2,
+          "timestamp": "15.00",
+          "item": "es jeruk",
+          "price": "10000"
+        }
+      ]
+    }
+  ]
+}
