@@ -15,7 +15,8 @@ export const hideModal = () => {
 }
 
 export const getEntries = () => async (dispatch) => {
-    const response = await axios.get('http://localhost:3005/items')
+    const response = await axios.get('https://my-json-server.typicode.com/mfrhn18/daily-expenses/items')
+    // const response = await axios.get('http://localhost:3005/items')
     // const data = await response.json()
 
     dispatch({
