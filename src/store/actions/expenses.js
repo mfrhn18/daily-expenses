@@ -14,34 +14,14 @@ export const hideModal = () => {
     }
 }
 
-export const getEntries = () => async () => {
-    const response = await fetch('http://localhost:3005/items')
-    const data = await response.json()
+export const getEntries = () => async (dispatch) => {
+    const response = await axios.get('http://localhost:3005/items')
+    // const data = await response.json()
 
-    console.log(data)
-
-    return{
+    dispatch({
         type: "SUCCESS_GET_ENTRIES",
-        payload: data
-    }
-
-    // try {
-    //     dispatch({
-    //         type: "LOAD_ENTRIES"
-    //     })
-
-    //     const response = await axios.get('http://localhost:3005/items')
-    //     // const data = await response.json()
-
-    //     dispatch({
-    //         type: "SUCCESS_GET_ENTRIES",
-    //         payload: response
-    //     })
-    // } catch(e) {
-    //     dispatch({
-    //         type: "FAILED_GET_ENTRIES"
-    //     })
-    // }
+        payload: response.data
+    })
 }
 
 export const addEntries = (entry) => {

@@ -5,7 +5,7 @@ const Day = ({ data }) => {
     const totalPrice = data.entries.reduce((previousValue, currentValue) => {
         return(previousValue += parseInt(currentValue.price))
     }, 0) 
-    console.log(totalPrice)
+    
     return(
         <Col md={4} style={{ marginTop: "2rem", marginBottom: "1rem" }}>
             <Card>

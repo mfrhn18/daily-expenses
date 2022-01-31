@@ -9,8 +9,7 @@ const AddEntry = props => {
         item: "",
         price: ""
     })
-    // const [item, setItem] = useState()
-    // const [price, setPrice] = useState()
+    
     const dispatch = useDispatch()
 
     const handleChange = (e) => {

@@ -39,9 +39,13 @@ const Home = () => {
 
     const month = new Date().toLocaleDateString('default', { month: 'long' }) + " " + new Date().getUTCFullYear()
 
-    const sumTotal = expenses.reduce((previousValue, currentValue) => {
-        return(previousValue += parseInt(currentValue.total))
-    }, 0) 
+    const trySum = expenses.map(item => {   // get total price for each entries
+        return item.entries.reduce((previousValue, currentValue) => {
+            return(previousValue += parseInt(currentValue.price))
+        }, 0)
+    })
+
+    const sumTotal = trySum.reduce((previousValue, currentValue) => { return(previousValue += parseInt(currentValue)) }, 0) // sum total price of the entire entries 
 
     return(
         <Container style={{ marginTop: "2rem", textAlign:"center" }}>
@@ -50,10 +54,10 @@ const Home = () => {
             <Button onClick={ openModal }>Tambah Item</Button>
 
             <Row style={{ marginTop: "2rem", width: "100%", justifyContent: "space-between" }}>
-                { expenses.reverse().map(day =>
+                {/* { expenses.reverse().map(day =>
                 <Day key={ day.id } data={ day } /> 
-                )}
-                {/* { showData() } */}
+                )} */}
+                { showData() }
             </Row>
             
             <AddEntry show={ show } hide={ hide } />
